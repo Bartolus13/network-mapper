@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Network Designer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h3>Urządzenia</h3>
+    <div class="palette">
+      <div class="palette-item" data-type="router">Router</div>
+      <div class="palette-item" data-type="switch">Switch</div>
+      <div class="palette-item" data-type="pc">PC</div>
+    </div>
+    <p class="hint">Przeciągnij urządzenie na płótno</p>
+    <div class="config">
+      <h4>Wybrane urządzenie</h4>
+      <div class="field">
+        <label>Nazwa</label>
+        <input id="selectedName" type="text" />
+      </div>
+      <div class="field">
+        <label>Ilość portów</label>
+        <input id="selectedPorts" type="number" min="1" max="8" value="1" />
+      </div>
+      <div class="field">
+        <button id="deleteSelected">Usuń urządzenie</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div id="canvas" class="canvas">
+      <svg id="svglines" class="svglines"></svg>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
